@@ -41,5 +41,20 @@ document.getElementById('calculator').addEventListener('click', function () {
         const newTypedNumber = previousTypedNumber + number;
         typedNumbeFiled.value = newTypedNumber;
     }
-    console.log()
+})
+
+
+document.getElementById('verify-pin').addEventListener('click', function () {
+    const displayPinFiled = document.getElementById('display-pin');
+    const currentPin = displayPinFiled.value;
+
+    const typedNumberFiled = document.getElementById('typed-number');
+    const typedNumber = typedNumberFiled.value;
+
+    if (typedNumber === currentPin) {
+        console.log('currect pin');
+    }
+    else {
+        console.log('incorrect pin')
+    }
 })
