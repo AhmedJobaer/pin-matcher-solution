@@ -51,10 +51,15 @@ document.getElementById('verify-pin').addEventListener('click', function () {
     const typedNumberFiled = document.getElementById('typed-number');
     const typedNumber = typedNumberFiled.value;
 
+    const pinSuccessMassage = document.getElementById('pin-success');
+    const pinFailureMassage = document.getElementById('pin-failure');
+
     if (typedNumber === currentPin) {
-        console.log('currect pin');
+        pinSuccessMassage.style.display = 'block';
+        pinFailureMassage.style.display = 'none';
     }
     else {
-        console.log('incorrect pin')
+        pinFailureMassage.style.display = 'block';
+        pinSuccessMassage.style.display = 'none';
     }
 })
